@@ -131,6 +131,7 @@ export function Hero() {
             <Button
               size="lg"
               className="rounded-full px-6 text-base"
+              nativeButton={false}
               render={<Link href="/contact" />}
             >
               Plan my trip <ArrowRight className="size-4" />
@@ -139,6 +140,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="rounded-full border-white/40 bg-white/10 px-6 text-base text-white backdrop-blur-sm hover:bg-white/20 hover:text-white"
+              nativeButton={false}
               render={<Link href="/testimonials" />}
             >
               <PlayCircle className="size-4" /> Traveller stories

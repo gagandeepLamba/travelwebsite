@@ -53,7 +53,7 @@ export default function AboutPage() {
       <div className="relative h-[42vh] min-h-72 w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1920&q=80&auto=format&fit=crop"
-          alt="Lakeside palace architecture in Rajasthan"
+          alt="Amber Fort, a royal Rajasthan hill fort"
           fill
           priority
           sizes="100vw"

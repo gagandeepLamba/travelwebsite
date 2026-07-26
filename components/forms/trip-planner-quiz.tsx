@@ -281,7 +281,9 @@ export function TripPlannerQuiz() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-7 flex items-center justify-between gap-3">
+        {/* Extra right padding on mobile keeps the Next/Submit button clear of the
+            floating chat + WhatsApp buttons anchored bottom-right of the viewport. */}
+        <div className="mt-7 flex items-center justify-between gap-3 pr-16 sm:pr-0">
           <Button
             type="button"
             variant="outline"

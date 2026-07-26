@@ -197,7 +197,12 @@ export default async function PackageDetailPage({
                 <span className="text-sm font-normal text-muted-foreground"> /{pkg.price.unit}</span>
               </p>
               <p className="mt-1 text-xs text-muted-foreground">Best season: {pkg.bestSeason}</p>
-              <Button size="lg" className="mt-5 w-full rounded-full" render={<Link href="/contact" />}>
+              <Button
+                size="lg"
+                className="mt-5 w-full rounded-full"
+                nativeButton={false}
+                render={<Link href="/contact" />}
+              >
                 Enquire Now
               </Button>
               <a

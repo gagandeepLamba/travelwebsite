@@ -111,7 +111,7 @@ export function Header() {
             <Phone className="size-4" />
             {siteConfig.contact.phone}
           </a>
-          <Button size="lg" className="rounded-full" render={<Link href="/contact" />}>
+          <Button size="lg" className="rounded-full" nativeButton={false} render={<Link href="/contact" />}>
             Plan My Trip
           </Button>
         </div>

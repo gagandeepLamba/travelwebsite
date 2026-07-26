@@ -58,9 +58,9 @@ export const tourPackages: TourPackage[] = [
       "Optional helicopter upgrade for Kedarnath",
       "Experienced Himalayan drivers",
     ],
-    heroImage: img("photo-1506126613408-eca07ce68773", "Himalayan mountain range on the Char Dham route"),
+    heroImage: img("photo-1454496522488-7a8e488e8606", "Himalayan mountain range on the Char Dham route"),
     gallery: [
-      img("photo-1506126613408-eca07ce68773", "Himalayas near Kedarnath", 1200),
+      img("photo-1454496522488-7a8e488e8606", "Himalayas near Kedarnath", 1200),
       img("photo-1544367567-0f2fcb009e0b", "Prayer flags in the Himalayas", 1200),
       img("photo-1626621341517-bbf3d9990a23", "Mountain valley on the pilgrimage route", 1200),
     ],
@@ -102,8 +102,7 @@ export const tourPackages: TourPackage[] = [
     heroImage: img("photo-1477587458883-47145ed94245", "Hawa Mahal, the Palace of Winds, Jaipur"),
     gallery: [
       img("photo-1599661046289-e31897846e41", "Lakeside palace, Udaipur", 1200),
-      img("photo-1533130061792-64b345e4a833", "Desert dunes near Jaisalmer", 1200),
-      img("photo-1571407970349-bc81e7e96d47", "Fort architecture, Rajasthan", 1200),
+      img("photo-1547234935-80c7145ec969", "Desert dunes near Jaisalmer", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Jaipur", description: "Welcome and check-in, evening at Chokhi Dhani cultural village." },
@@ -143,7 +142,7 @@ export const tourPackages: TourPackage[] = [
     gallery: [
       img("photo-1593693411515-c20261bcad6e", "Kerala backwaters houseboat", 1200),
       img("photo-1602216056096-3b40cc0c9944", "Palm-lined backwater canal, Kerala", 1200),
-      img("photo-1520454974749-611b7248ffdb", "Tea plantations, Munnar", 1200),
+      img("photo-1590050752117-238cb0fb12b1", "Canoe on a palm-fringed canal, Kerala", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Kochi", description: "Fort Kochi heritage walk, evening Kathakali show." },
@@ -200,7 +199,7 @@ export const tourPackages: TourPackage[] = [
     heroImage: img("photo-1626621341517-bbf3d9990a23", "Mountain lake and peaks in Ladakh"),
     gallery: [
       img("photo-1626621341517-bbf3d9990a23", "Ladakh valley landscape", 1200),
-      img("photo-1506126613408-eca07ce68773", "High-altitude Himalayan range", 1200),
+      img("photo-1454496522488-7a8e488e8606", "High-altitude Himalayan range", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Leh", description: "Acclimatisation day, gentle local market walk." },
@@ -227,10 +226,10 @@ export const tourPackages: TourPackage[] = [
     reviewCount: 96,
     summary: "India's most legendary luxury train — royal cabins, onboard fine dining and a week of Rajasthan's grandest sights.",
     highlights: ["Ex-maharaja saloon-inspired cabins", "Onboard restaurant & lounge bar", "Spa car with Ayurvedic treatments", "All sightseeing across 6 destinations"],
-    heroImage: img("photo-1516426122078-c23e76319801", "Luxury train carriage interior"),
+    heroImage: img("photo-1599661046289-e31897846e41", "Amber Fort — the royal Rajasthan heritage behind the Palace on Wheels"),
     gallery: [
-      img("photo-1516426122078-c23e76319801", "Luxury train interior", 1200),
-      img("photo-1613395877344-13d4a8e0d49e", "Ornate train cabin detailing", 1200),
+      img("photo-1599661046289-e31897846e41", "Amber Fort, Rajasthan", 1200),
+      img("photo-1564507592333-c60657eea523", "The Taj Mahal, one of the journey's stops", 1200),
       img("photo-1477587458883-47145ed94245", "Rajasthan palace en route", 1200),
     ],
     itinerary: [
@@ -262,7 +261,7 @@ export const tourPackages: TourPackage[] = [
     heroImage: img("photo-1544367567-0f2fcb009e0b", "Yoga session overlooking the Ganga in Rishikesh"),
     gallery: [
       img("photo-1544367567-0f2fcb009e0b", "Yoga by the Ganga, Rishikesh", 1200),
-      img("photo-1506126613408-eca07ce68773", "Himalayan foothills near Rishikesh", 1200),
+      img("photo-1454496522488-7a8e488e8606", "Himalayan foothills near Rishikesh", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrival & Orientation", description: "Welcome, ashram check-in, orientation session." },
@@ -320,7 +319,7 @@ export const tourPackages: TourPackage[] = [
     heroImage: img("photo-1512453979798-5ea266f8880c", "Dubai skyline at dusk"),
     gallery: [
       img("photo-1512453979798-5ea266f8880c", "Dubai skyscrapers", 1200),
-      img("photo-1590050752117-238cb0fb12b1", "Desert dunes near Dubai", 1200),
+      img("photo-1547234935-80c7145ec969", "Desert dunes near Dubai", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Dubai", description: "Airport pickup, evening at leisure." },
@@ -349,7 +348,7 @@ export const tourPackages: TourPackage[] = [
     heroImage: img("photo-1528181304800-259b08848526", "Thai temple architecture"),
     gallery: [
       img("photo-1528181304800-259b08848526", "Temple in Bangkok", 1200),
-      img("photo-1587474260584-136574528ed5", "Tropical island beach, Thailand", 1200),
+      img("photo-1552465011-b4e21bf6e79a", "Railay Beach, Thailand", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Bangkok", description: "Airport pickup, evening river cruise dinner." },
@@ -378,7 +377,7 @@ export const tourPackages: TourPackage[] = [
     heroImage: img("photo-1525625293386-3f8f99389edd", "Marina Bay skyline, Singapore"),
     gallery: [
       img("photo-1525625293386-3f8f99389edd", "Singapore Marina Bay", 1200),
-      img("photo-1524492412937-b28074a5d7da", "Gardens by the Bay, Singapore", 1200),
+      img("photo-1565967511849-76a60a516170", "Marina Bay at night, Singapore", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Singapore", description: "Airport pickup, evening at Clarke Quay." },
@@ -402,10 +401,10 @@ export const tourPackages: TourPackage[] = [
     reviewCount: 118,
     summary: "Turquoise lagoons, private beach dinners and catamaran sunsets on the Indian Ocean's most romantic isle.",
     highlights: ["Beachfront resort with private balcony", "Catamaran cruise with lunch", "Couple's spa experience", "Chamarel & Black River excursion"],
-    heroImage: img("photo-1544551763-46a013bb70d5", "Turquoise lagoon beach, Mauritius"),
+    heroImage: img("photo-1573843981267-be1999ff37cd", "Overwater villas on a turquoise lagoon, Mauritius"),
     gallery: [
-      img("photo-1544551763-46a013bb70d5", "Mauritius beach lagoon", 1200),
-      img("photo-1548013146-72479768bada", "Tropical coastline, Mauritius", 1200),
+      img("photo-1573843981267-be1999ff37cd", "Mauritius beach lagoon", 1200),
+      img("photo-1512343879784-a960bf40e7f2", "Tropical coastline, Mauritius", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Mauritius", description: "Airport pickup, romantic room décor on arrival." },
@@ -458,10 +457,10 @@ export const tourPackages: TourPackage[] = [
     reviewCount: 201,
     summary: "Houseboats on Dal Lake, gondola rides over Gulmarg's snowfields and pine-fringed valleys — Kashmir at its most postcard-perfect.",
     highlights: ["Overnight houseboat stay on Dal Lake", "Gulmarg Gondola ride", "Betaab Valley & Pahalgam sightseeing", "Shikara sunset ride"],
-    heroImage: img("photo-1566837945700-30057527ade0", "Houseboats on Dal Lake, Srinagar"),
+    heroImage: img("photo-1454496522488-7a8e488e8606", "Snow-capped Himalayan peaks above Kashmir"),
     gallery: [
-      img("photo-1566837945700-30057527ade0", "Dal Lake, Srinagar", 1200),
-      img("photo-1506126613408-eca07ce68773", "Snow-capped peaks, Kashmir", 1200),
+      img("photo-1454496522488-7a8e488e8606", "Himalayan peaks, Kashmir", 1200),
+      img("photo-1486870591958-9b9d0d1dda99", "Mountain valley, Kashmir", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Srinagar", description: "Check into your houseboat, evening Shikara ride on Dal Lake." },
@@ -487,10 +486,10 @@ export const tourPackages: TourPackage[] = [
     reviewCount: 132,
     summary: "Tea gardens at dawn, the toy train through the hills, and Kanchenjunga views from Sikkim's monasteries.",
     highlights: ["Tiger Hill sunrise over Kanchenjunga", "Darjeeling Himalayan Railway (toy train) ride", "Tea garden walk & tasting", "Rumtek Monastery visit"],
-    heroImage: img("photo-1571847140471-1d7766e825ea", "Tea gardens in the hills near Darjeeling"),
+    heroImage: img("photo-1518002054494-3a6f94352e9d", "Himalayan hill town in the Darjeeling-Sikkim region"),
     gallery: [
-      img("photo-1571847140471-1d7766e825ea", "Darjeeling tea gardens", 1200),
       img("photo-1518002054494-3a6f94352e9d", "Himalayan hill town, Sikkim", 1200),
+      img("photo-1486870591958-9b9d0d1dda99", "Mountain views near Darjeeling", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Bagdogra to Darjeeling", description: "Scenic drive up into the hills, evening at Mall Road." },
@@ -516,10 +515,10 @@ export const tourPackages: TourPackage[] = [
     reviewCount: 76,
     summary: "A pilgrimage through the Buddha's life — from enlightenment at Bodh Gaya to the first sermon at Sarnath.",
     highlights: ["Mahabodhi Temple, Bodh Gaya", "Nalanda University ruins", "Evening Ganga Aarti in Varanasi", "Sarnath deer park & stupa"],
-    heroImage: img("photo-1518002054494-3a6f94352e9d", "Ancient temple architecture on the Buddhist circuit"),
+    heroImage: img("photo-1477587458883-47145ed94245", "Ancient Indian heritage architecture on the Buddhist circuit"),
     gallery: [
-      img("photo-1518002054494-3a6f94352e9d", "Buddhist temple architecture", 1200),
-      img("photo-1587135941948-670b381f08ce", "Ganga ghats, Varanasi", 1200),
+      img("photo-1477587458883-47145ed94245", "Historic architecture, India", 1200),
+      img("photo-1599661046289-e31897846e41", "Ancient fort architecture, India", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Bodh Gaya", description: "Visit the Mahabodhi Temple and Bodhi Tree." },
@@ -545,10 +544,10 @@ export const tourPackages: TourPackage[] = [
     reviewCount: 108,
     summary: "Tea-country hills, ancient temples and a golden coastline — Sri Lanka's highlights in one easy loop.",
     highlights: ["Temple of the Tooth, Kandy", "Nuwara Eliya tea plantation tour", "Pinnawala Elephant Orphanage", "Bentota beach & river safari"],
-    heroImage: img("photo-1573790387438-4da905039392", "Tea plantations in the hills of Sri Lanka"),
+    heroImage: img("photo-1573790387438-4da905039392", "Coastal cliffs and turquoise water, Sri Lanka"),
     gallery: [
-      img("photo-1573790387438-4da905039392", "Sri Lanka tea country", 1200),
-      img("photo-1587474260584-136574528ed5", "Golden coastline, Sri Lanka", 1200),
+      img("photo-1573790387438-4da905039392", "Coastal cliffs, Sri Lanka", 1200),
+      img("photo-1512343879784-a960bf40e7f2", "Golden coastline, Sri Lanka", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Colombo", description: "Airport pickup, evening city tour." },
@@ -574,10 +573,10 @@ export const tourPackages: TourPackage[] = [
     reviewCount: 64,
     summary: "The Tiger's Nest monastery, dzongs draped over river valleys, and the quiet calm of the last Himalayan kingdom.",
     highlights: ["Tiger's Nest (Paro Taktsang) hike", "Punakha Dzong river-valley views", "Thimphu monasteries & local markets", "Traditional Bhutanese archery demonstration"],
-    heroImage: img("photo-1594732832278-abd644401426", "Prayer flags and Himalayan monastery in Bhutan"),
+    heroImage: img("photo-1518002054494-3a6f94352e9d", "Traditional Himalayan village and monastery, Bhutan"),
     gallery: [
-      img("photo-1594732832278-abd644401426", "Bhutanese monastery in the mountains", 1200),
-      img("photo-1506126613408-eca07ce68773", "Himalayan valley, Bhutan", 1200),
+      img("photo-1518002054494-3a6f94352e9d", "Himalayan monastery village, Bhutan", 1200),
+      img("photo-1486870591958-9b9d0d1dda99", "Himalayan valley, Bhutan", 1200),
     ],
     itinerary: [
       { day: 1, title: "Arrive Paro to Thimphu", description: "Scenic flight into Paro, drive to Thimphu." },

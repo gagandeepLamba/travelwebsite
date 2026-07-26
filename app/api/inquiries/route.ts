@@ -1,11 +1,16 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { quickInquirySchema, tripPlannerSchema } from "@/lib/validations/inquiry";
+import {
+  chatbotInquirySchema,
+  quickInquirySchema,
+  tripPlannerSchema,
+} from "@/lib/validations/inquiry";
 import { saveLead } from "@/lib/server/leads";
 
 const inquirySchema = z.union([
   quickInquirySchema.extend({ source: z.literal("quick-inquiry") }),
   tripPlannerSchema.extend({ source: z.literal("trip-planner") }),
+  chatbotInquirySchema.extend({ source: z.literal("chatbot") }),
 ]);
 
 export async function POST(request: Request) {

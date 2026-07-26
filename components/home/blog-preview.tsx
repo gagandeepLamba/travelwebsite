@@ -24,7 +24,7 @@ export async function BlogPreview() {
               Travel stories & guides
             </h2>
           </div>
-          <Button variant="outline" className="rounded-full" render={<Link href="/blog" />}>
+          <Button variant="outline" className="rounded-full" nativeButton={false} render={<Link href="/blog" />}>
             Read the blog <ArrowRight className="size-4" />
           </Button>
         </Reveal>

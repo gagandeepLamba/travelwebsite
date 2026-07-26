@@ -77,7 +77,7 @@ const posts = [
     excerpt:
       "What to actually expect from an overnight camel safari and desert camp in the Thar Desert — beyond the Instagram photos.",
     categorySlug: "category-india",
-    imageUrl: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1600&q=80&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1547234935-80c7145ec969?w=1600&q=80&auto=format&fit=crop",
     imageAlt: "Desert dunes near Jaisalmer at sunset",
     body: [
       "The camel ride out to camp is slower and bumpier than it looks in photos — wear closed shoes and expect sand everywhere by the time you arrive.",
@@ -105,7 +105,7 @@ const posts = [
     excerpt:
       "From Himalayan cold to Kerala humidity — a realistic packing list for travellers covering multiple regions of India in one trip.",
     categorySlug: "category-tips",
-    imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1600&q=80&auto=format&fit=crop",
     imageAlt: "Himalayan mountain range",
     body: [
       "India's regions can differ by 20+ degrees on the same day if your itinerary spans hills and coast — layering is non-negotiable.",

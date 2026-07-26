@@ -30,6 +30,7 @@ export function CtaBanner() {
               size="lg"
               variant="secondary"
               className="rounded-full px-6 text-base"
+              nativeButton={false}
               render={<Link href="/contact" />}
             >
               Start planning <ArrowRight className="size-4" />

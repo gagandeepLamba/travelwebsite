@@ -32,6 +32,23 @@ export const tripPlannerSchema = z.object({
 
 export type TripPlannerInput = z.infer<typeof tripPlannerSchema>;
 
+export const chatbotInquirySchema = z.object({
+  tripType: z.enum([
+    "india-tours",
+    "international-tours",
+    "yoga-retreats",
+    "luxury-trains",
+    "honeymoon",
+    "custom",
+  ]),
+  name: z.string().min(2, "Please enter your full name"),
+  email: z.email("Enter a valid email address"),
+  phone: z.string().min(8, "Enter a valid phone number"),
+  message: z.string().max(1000).optional(),
+});
+
+export type ChatbotInquiryInput = z.infer<typeof chatbotInquirySchema>;
+
 export const newsletterSchema = z.object({
   email: z.email("Enter a valid email address"),
 });

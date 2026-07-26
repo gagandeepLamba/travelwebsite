@@ -31,6 +31,7 @@ export function FeaturedPackages() {
           <Button
             variant="outline"
             className="rounded-full"
+            nativeButton={false}
             render={<Link href="/packages" />}
           >
             View all packages <ArrowRight className="size-4" />
