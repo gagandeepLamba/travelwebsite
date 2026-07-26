@@ -22,7 +22,7 @@ export function CtaBanner() {
             Your next journey starts with one message
           </h2>
           <p className="relative mx-auto mt-3 max-w-xl text-primary-foreground/85">
-            Tell us where you'd love to go — we'll take care of the rest, from the first flight to
+            Tell us where you&rsquo;d love to go — we&rsquo;ll take care of the rest, from the first flight to
             the last sunset.
           </p>
           <div className="relative mt-7 flex flex-wrap items-center justify-center gap-3">

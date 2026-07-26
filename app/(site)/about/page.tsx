@@ -63,7 +63,7 @@ export default function AboutPage() {
         <Container className="relative flex h-full flex-col justify-end pb-10">
           <p className="text-sm font-semibold uppercase tracking-wide text-white/80">About us</p>
           <h1 className="mt-2 max-w-2xl font-heading text-3xl font-semibold text-white sm:text-5xl">
-            We plan trips the way we'd want them planned for us
+            We plan trips the way we&rsquo;d want them planned for us
           </h1>
         </Container>
       </div>
@@ -71,14 +71,14 @@ export default function AboutPage() {
       <Container>
         <Reveal className="mx-auto mt-12 max-w-3xl text-center">
           <p className="text-lg text-muted-foreground">
-            {siteConfig.legalName} started with a simple frustration: too many "customised"
+            {siteConfig.legalName} started with a simple frustration: too many &ldquo;customised&rdquo;
             itineraries were really just the same template with a new name on it. Since{" "}
-            {siteConfig.founded}, we've built our business the other way around — every trip
+            {siteConfig.founded}, we&rsquo;ve built our business the other way around — every trip
             begins with your budget, your pace and your interests, and the itinerary is built to
             match.
           </p>
           <p className="mt-5 font-heading text-xl italic text-foreground sm:text-2xl">
-            "{siteConfig.philosophy}"
+            &ldquo;{siteConfig.philosophy}&rdquo;
           </p>
         </Reveal>
 

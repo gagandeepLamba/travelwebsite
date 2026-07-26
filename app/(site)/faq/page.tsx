@@ -40,7 +40,7 @@ export default function FaqPage() {
             Frequently asked questions
           </h1>
           <p className="mt-4 text-muted-foreground">
-            Can't find what you're looking for? Chat with us on the widget in the corner, or reach
+            Can&apos;t find what you&apos;re looking for? Chat with us on the widget in the corner, or reach
             out on WhatsApp.
           </p>
         </Reveal>

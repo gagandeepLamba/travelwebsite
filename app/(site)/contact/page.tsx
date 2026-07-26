@@ -26,7 +26,7 @@ export default function ContactPage() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-primary">Contact us</p>
           <h1 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-5xl">
-            Let's plan your trip
+            Let&rsquo;s plan your trip
           </h1>
           <p className="mt-4 text-muted-foreground">
             Answer a few quick questions and a travel expert will reach out with a tailored
@@ -109,7 +109,7 @@ export default function ContactPage() {
             <Reveal delay={0.25}>
               <div className="rounded-3xl border border-border bg-card p-6">
                 <h2 className="flex items-center gap-2 font-heading text-lg font-semibold text-foreground">
-                  <Globe className="size-4.5 text-primary" /> Where you'll find us
+                  <Globe className="size-4.5 text-primary" /> Where you&rsquo;ll find us
                 </h2>
                 <p className="mt-3 text-sm text-muted-foreground">
                   Associate offices across {siteConfig.associateOffices.join(", ")}.

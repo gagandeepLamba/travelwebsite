@@ -36,7 +36,7 @@ export function QuoteSection() {
             {siteConfig.stats[1].value.toLocaleString("en-IN")}+ happy travellers
           </p>
           <h2 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-            Tell us your dream trip. We'll handle the rest.
+            Tell us your dream trip. We&rsquo;ll handle the rest.
           </h2>
           <p className="mt-4 max-w-md text-muted-foreground">
             From a weekend in Goa to a three-week grand tour of India, our travel experts turn

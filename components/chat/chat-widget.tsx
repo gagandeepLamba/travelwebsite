@@ -35,13 +35,17 @@ export function ChatWidget() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
 
-  useEffect(() => {
-    if (open && !hasOpenedOnce) {
-      setHasOpenedOnce(true);
-      pushBot(greetingMessage());
-      setQuickReplies(rootQuickReplies());
+  function handleToggle() {
+    if (!open) {
+      trackEvent("chat_widget_open");
+      if (!hasOpenedOnce) {
+        setHasOpenedOnce(true);
+        pushBot(greetingMessage());
+        setQuickReplies(rootQuickReplies());
+      }
     }
-  }, [open, hasOpenedOnce]);
+    setOpen((v) => !v);
+  }
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
