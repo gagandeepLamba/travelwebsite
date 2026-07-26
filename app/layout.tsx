@@ -1,14 +1,5 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { StickyMobileCta } from "@/components/layout/sticky-mobile-cta";
-import { WhatsAppButton } from "@/components/chat/whatsapp-button";
-import { ChatWidget } from "@/components/chat/chat-widget";
-import { JsonLd } from "@/components/seo/json-ld";
-import { organizationSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/constants/site";
 import "./globals.css";
 
@@ -58,18 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fontSans.variable} ${fontHeading.variable}`}>
-      <body className="antialiased">
-        <JsonLd data={organizationSchema()} />
-        <TooltipProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <StickyMobileCta />
-          <WhatsAppButton />
-          <ChatWidget />
-          <Toaster theme="light" />
-        </TooltipProvider>
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
