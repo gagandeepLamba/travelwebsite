@@ -1,3 +1,15 @@
+// Resolves, in order: an explicit NEXT_PUBLIC_SITE_URL override, Vercel's stable
+// production domain, the current Vercel deployment URL (previews), then a
+// hardcoded fallback for local dev / other hosts.
+function resolveSiteUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "https://www.planourtravel.com";
+}
+
 export const siteConfig = {
   name: "Plan Our Travel India",
   shortName: "Plan Our Travel",
@@ -5,7 +17,7 @@ export const siteConfig = {
   tagline: "Crafting journeys across India & beyond",
   description:
     "Plan Our Travel India is a full-service travel company crafting bespoke India tours, international getaways, yoga retreats and luxury train journeys — designed around you, handled end to end.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.planourtravel.com",
+  url: resolveSiteUrl(),
   ogImage: "/og-default.jpg",
   keywords: [
     "India tour packages",

@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
 import { siteConfig } from "@/lib/constants/site";
 
-const rows = [
+const rows: { label: string; direct: boolean | "maybe"; other: boolean | "maybe" }[] = [
   { label: "Dedicated travel expert from enquiry to return", direct: true, other: false },
   { label: "Itinerary customised to your budget & pace", direct: true, other: false },
   { label: "Transparent, all-inclusive pricing", direct: true, other: "maybe" },
