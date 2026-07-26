@@ -38,10 +38,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 w-full transition-colors duration-300",
-        scrolled
-          ? "border-b border-border/80 bg-background/90 backdrop-blur-md"
-          : "border-b border-transparent bg-background/40 backdrop-blur-sm"
+        "sticky top-0 z-40 w-full border-b bg-background/85 backdrop-blur-md transition-shadow duration-300",
+        scrolled ? "border-border/80 shadow-sm shadow-black/5" : "border-border/40"
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4 sm:h-20">
