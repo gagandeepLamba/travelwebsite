@@ -1,23 +1,20 @@
 import Link from "next/link";
+import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  ShieldCheck,
-  Youtube,
-} from "lucide-react";
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  YoutubeIcon,
+} from "@/components/icons/social-icons";
 import { Container } from "@/components/layout/container";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { footerLinks, siteConfig } from "@/lib/constants/site";
 
 const socialLinks = [
-  { href: siteConfig.social.facebook, label: "Facebook", icon: Facebook },
-  { href: siteConfig.social.instagram, label: "Instagram", icon: Instagram },
-  { href: siteConfig.social.linkedin, label: "LinkedIn", icon: Linkedin },
-  { href: siteConfig.social.youtube, label: "YouTube", icon: Youtube },
+  { href: siteConfig.social.facebook, label: "Facebook", icon: FacebookIcon },
+  { href: siteConfig.social.instagram, label: "Instagram", icon: InstagramIcon },
+  { href: siteConfig.social.linkedin, label: "LinkedIn", icon: LinkedinIcon },
+  { href: siteConfig.social.youtube, label: "YouTube", icon: YoutubeIcon },
 ];
 
 function FooterColumn({
