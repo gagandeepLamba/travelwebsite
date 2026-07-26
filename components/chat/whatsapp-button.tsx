@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { siteConfig } from "@/lib/constants/site";
+import { trackEvent } from "@/lib/analytics";
 
 const DEFAULT_MESSAGE =
   "Hi Plan Our Travel India, I'd like help planning a trip.";
@@ -17,6 +18,7 @@ export function WhatsAppButton({ bottomOffsetClass = "bottom-24 sm:bottom-6" }: 
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
+      onClick={() => trackEvent("whatsapp_click", { source: "floating_button" })}
       className={`fixed right-5 z-40 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 ${bottomOffsetClass}`}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

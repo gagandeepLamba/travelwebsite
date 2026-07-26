@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { newsletterSchema, type NewsletterInput } from "@/lib/validations/inquiry";
+import { trackEvent } from "@/lib/analytics";
 
 export function NewsletterForm({ className }: { className?: string }) {
   const [submitting, setSubmitting] = useState(false);
@@ -26,6 +27,7 @@ export function NewsletterForm({ className }: { className?: string }) {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackEvent("newsletter_signup");
       toast.success("You're subscribed — welcome aboard!");
       reset();
     } catch {

@@ -14,6 +14,7 @@ import {
   type QuickInquiryInput,
 } from "@/lib/validations/inquiry";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/analytics";
 
 export function QuickInquiryForm({ className }: { className?: string }) {
   const [submitting, setSubmitting] = useState(false);
@@ -33,6 +34,7 @@ export function QuickInquiryForm({ className }: { className?: string }) {
         body: JSON.stringify({ ...data, source: "quick-inquiry" }),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackEvent("generate_lead", { form: "quick_inquiry" });
       toast.success("Thanks! Our travel expert will call you shortly.");
       reset();
     } catch {

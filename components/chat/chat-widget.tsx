@@ -9,6 +9,7 @@ import { getFeaturedPackages } from "@/lib/data/packages";
 import { faqs } from "@/lib/data/faqs";
 import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/analytics";
 
 interface ChatMessage {
   id: string;
@@ -201,8 +202,13 @@ export function ChatWidget() {
       <motion.button
         type="button"
         aria-label={open ? "Close chat" : "Open chat"}
-        onClick={() => setOpen((v) => !v)}
-        className="fixed right-5 bottom-[10.5rem] z-40 flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 sm:bottom-24"
+        onClick={() =>
+          setOpen((v) => {
+            if (!v) trackEvent("chat_widget_open");
+            return !v;
+          })
+        }
+        className="fixed right-5 bottom-42 z-40 flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 sm:bottom-24"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.4, type: "spring", stiffness: 200, damping: 15 }}
@@ -236,7 +242,7 @@ export function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.96 }}
             transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-[calc(10.5rem+4rem)] right-3 z-40 flex h-[min(32rem,70vh)] w-[calc(100vw-1.5rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-border bg-popover shadow-2xl sm:right-5 sm:bottom-[calc(6rem+4rem)]"
+            className="fixed right-3 bottom-58 z-40 flex h-[min(32rem,70vh)] w-[calc(100vw-1.5rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-border bg-popover shadow-2xl sm:right-5 sm:bottom-40"
           >
             <div className="flex items-center gap-3 bg-primary px-4 py-3.5 text-primary-foreground">
               <span className="flex size-9 items-center justify-center rounded-full bg-white/15">

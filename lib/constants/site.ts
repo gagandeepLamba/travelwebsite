@@ -18,7 +18,6 @@ export const siteConfig = {
   description:
     "Plan Our Travel India is a full-service travel company crafting bespoke India tours, international getaways, yoga retreats and luxury train journeys — designed around you, handled end to end.",
   url: resolveSiteUrl(),
-  ogImage: "/og-default.jpg",
   keywords: [
     "India tour packages",
     "international tour packages",

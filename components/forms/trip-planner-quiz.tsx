@@ -19,6 +19,7 @@ import {
 import { tripPlannerSchema, type TripPlannerInput } from "@/lib/validations/inquiry";
 import { packageCategories } from "@/lib/constants/site";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/analytics";
 
 const tripTypeOptions = [
   ...packageCategories.map((c) => ({ value: c.slug, label: c.label })),
@@ -82,6 +83,7 @@ export function TripPlannerQuiz() {
         body: JSON.stringify({ ...data, source: "trip-planner" }),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackEvent("generate_lead", { form: "trip_planner", trip_type: data.tripType });
       setSubmitted(true);
       toast.success("Got it! Your travel expert will reach out shortly.");
     } catch {

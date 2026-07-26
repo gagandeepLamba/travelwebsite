@@ -6,12 +6,14 @@ import { StickyMobileCta } from "@/components/layout/sticky-mobile-cta";
 import { WhatsAppButton } from "@/components/chat/whatsapp-button";
 import { ChatWidget } from "@/components/chat/chat-widget";
 import { JsonLd } from "@/components/seo/json-ld";
+import { GoogleAnalytics } from "@/components/seo/google-analytics";
 import { organizationSchema } from "@/lib/seo/schema";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <TooltipProvider>
       <JsonLd data={organizationSchema()} />
+      <GoogleAnalytics />
       <Header />
       <main>{children}</main>
       <Footer />
