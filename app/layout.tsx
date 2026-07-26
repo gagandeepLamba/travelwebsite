@@ -46,7 +46,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fontSans.variable} ${fontHeading.variable}`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${fontSans.variable} ${fontHeading.variable}`}
+    >
       <body className="antialiased">{children}</body>
     </html>
   );
