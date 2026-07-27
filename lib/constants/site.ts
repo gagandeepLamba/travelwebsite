@@ -95,9 +95,9 @@ export const siteConfig = {
 } as const;
 
 export const quickServiceLinks = [
-  { label: "Hotel Booking", href: "/contact" },
-  { label: "Flight Booking", href: "/contact" },
-  { label: "NGO Initiative", href: "/contact" },
+  { label: "Hotel Booking", href: "/hotel-booking" },
+  { label: "Flight Booking", href: "/flight-booking" },
+  { label: "NGO Initiative", href: "/ngo" },
 ] as const;
 
 export const navLinks = [
@@ -154,13 +154,13 @@ export const footerLinks = {
     { label: "Testimonials", href: "/testimonials" },
     { label: "Blog", href: "/blog" },
     { label: "Careers", href: "/contact" },
-    { label: "NGO Initiative", href: "/contact" },
+    { label: "NGO Initiative", href: "/ngo" },
   ],
   services: [
-    { label: "Flight Booking", href: "/contact" },
-    { label: "Hotel Booking", href: "/contact" },
-    { label: "Visa Assistance", href: "/contact" },
-    { label: "Custom Itineraries", href: "/contact" },
+    { label: "Flight Booking", href: "/flight-booking" },
+    { label: "Hotel Booking", href: "/hotel-booking" },
+    { label: "Visa Assistance", href: "/visa-assistance" },
+    { label: "Custom Itineraries", href: "/custom-itineraries" },
     { label: "Group & Corporate Tours", href: "/contact" },
   ],
   packages: packageCategories.map((c) => ({

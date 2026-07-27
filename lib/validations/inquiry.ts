@@ -54,3 +54,22 @@ export const newsletterSchema = z.object({
 });
 
 export type NewsletterInput = z.infer<typeof newsletterSchema>;
+
+export const customItinerarySchema = z.object({
+  country: z.string().min(1, "Please select a destination"),
+  days: z.number().int().min(1, "At least 1 day").max(60, "For 60+ day trips, please call us directly"),
+  dayPlans: z
+    .array(
+      z.object({
+        day: z.number().int().min(1),
+        plan: z.string().max(500).optional(),
+      })
+    )
+    .min(1, "Please tell us about at least one day"),
+  name: z.string().min(2, "Please enter your full name"),
+  email: z.email("Enter a valid email address"),
+  phone: z.string().min(8, "Enter a valid phone number"),
+  notes: z.string().max(1000).optional(),
+});
+
+export type CustomItineraryInput = z.infer<typeof customItinerarySchema>;

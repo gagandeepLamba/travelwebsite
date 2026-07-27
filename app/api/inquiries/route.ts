@@ -2,15 +2,18 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import {
   chatbotInquirySchema,
+  customItinerarySchema,
   quickInquirySchema,
   tripPlannerSchema,
 } from "@/lib/validations/inquiry";
 import { saveLead } from "@/lib/server/leads";
+import { sendLeadEmail } from "@/lib/server/email";
 
 const inquirySchema = z.union([
   quickInquirySchema.extend({ source: z.literal("quick-inquiry") }),
   tripPlannerSchema.extend({ source: z.literal("trip-planner") }),
   chatbotInquirySchema.extend({ source: z.literal("chatbot") }),
+  customItinerarySchema.extend({ source: z.literal("custom-itinerary") }),
 ]);
 
 export async function POST(request: Request) {
@@ -29,11 +32,19 @@ export async function POST(request: Request) {
     );
   }
 
+  if (
+    result.data.source === "custom-itinerary" &&
+    result.data.dayPlans.length !== result.data.days
+  ) {
+    return NextResponse.json(
+      { error: "Validation failed", issues: [{ message: "Day plans must match the number of days" }] },
+      { status: 422 }
+    );
+  }
+
   const { source, ...payload } = result.data;
   await saveLead(source, payload);
-
-  // TODO: wire a real email/CRM integration here (e.g. Resend or SMTP) —
-  // this stub only persists submissions to data/leads/leads.jsonl for now.
+  await sendLeadEmail(source, payload);
 
   return NextResponse.json({ ok: true });
 }
