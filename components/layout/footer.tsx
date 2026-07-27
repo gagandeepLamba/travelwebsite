@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import {
   FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
+  TwitterIcon,
   YoutubeIcon,
 } from "@/components/icons/social-icons";
 import { Container } from "@/components/layout/container";
@@ -12,6 +13,7 @@ import { footerLinks, siteConfig } from "@/lib/constants/site";
 
 const socialLinks = [
   { href: siteConfig.social.facebook, label: "Facebook", icon: FacebookIcon },
+  { href: siteConfig.social.twitter, label: "Twitter", icon: TwitterIcon },
   { href: siteConfig.social.instagram, label: "Instagram", icon: InstagramIcon },
   { href: siteConfig.social.linkedin, label: "LinkedIn", icon: LinkedinIcon },
   { href: siteConfig.social.youtube, label: "YouTube", icon: YoutubeIcon },
@@ -85,7 +87,21 @@ export function Footer() {
         <div className="mt-12 grid grid-cols-1 gap-8 border-t border-border pt-10 sm:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-2.5 text-sm text-muted-foreground">
             <a href={siteConfig.contact.phoneHref} className="flex items-center gap-2 hover:text-primary">
-              <Phone className="size-4 shrink-0" /> {siteConfig.contact.phone}
+              <Phone className="size-4 shrink-0" /> <span className="font-medium text-foreground">Office</span>:{" "}
+              {siteConfig.contact.phone}
+            </a>
+            <a href={siteConfig.contact.mobileHref} className="flex items-center gap-2 hover:text-primary">
+              <Phone className="size-4 shrink-0" /> <span className="font-medium text-foreground">Mobile</span>:{" "}
+              {siteConfig.contact.mobile}
+            </a>
+            <a
+              href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-primary"
+            >
+              <MessageCircle className="size-4 shrink-0" />{" "}
+              <span className="font-medium text-foreground">WhatsApp</span>: {siteConfig.contact.whatsapp}
             </a>
             <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-2 hover:text-primary">
               <Mail className="size-4 shrink-0" /> {siteConfig.contact.email}
