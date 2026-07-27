@@ -94,6 +94,12 @@ export const siteConfig = {
   ],
 } as const;
 
+export const quickServiceLinks = [
+  { label: "Hotel Booking", href: "/contact" },
+  { label: "Flight Booking", href: "/contact" },
+  { label: "NGO Initiative", href: "/contact" },
+] as const;
+
 export const navLinks = [
   { label: "Home", href: "/" },
   {
@@ -148,6 +154,7 @@ export const footerLinks = {
     { label: "Testimonials", href: "/testimonials" },
     { label: "Blog", href: "/blog" },
     { label: "Careers", href: "/contact" },
+    { label: "NGO Initiative", href: "/contact" },
   ],
   services: [
     { label: "Flight Booking", href: "/contact" },

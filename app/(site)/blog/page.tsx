@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { PageBanner } from "@/components/layout/page-banner";
 import { BlogCard } from "@/components/blog/blog-card";
 import { Reveal, StaggerGroup } from "@/components/motion/reveal";
 import { getAllCategories, getAllPosts } from "@/lib/sanity/queries";
@@ -41,18 +42,15 @@ export default async function BlogPage({
   const filtered = category ? posts.filter((p) => p.categories.some((c) => c.slug === category)) : posts;
 
   return (
-    <div className="py-12 sm:py-16">
-      <Container>
-        <Reveal>
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary">Journal</p>
-          <h1 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-            Travel stories & guides
-          </h1>
-          <p className="mt-3 max-w-2xl text-muted-foreground">
-            Itinerary ideas, destination deep-dives and practical tips from our travel experts.
-          </p>
-        </Reveal>
-
+    <div className="pb-16">
+      <PageBanner
+        eyebrow="Journal"
+        title="Travel stories & guides"
+        description="Itinerary ideas, destination deep-dives and practical tips from our travel experts."
+        image="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&q=80&auto=format&fit=crop"
+        imageAlt="Open journal and camera on a travel desk"
+      />
+      <Container className="pt-12 sm:pt-16">
         {categories.length > 0 && (
           <div className="no-scrollbar mt-8 flex gap-2 overflow-x-auto pb-1">
             <Link

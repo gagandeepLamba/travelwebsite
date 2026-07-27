@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Quote, Star } from "lucide-react";
 import { Container } from "@/components/layout/container";
+import { PageBanner } from "@/components/layout/page-banner";
 import { Reveal, StaggerGroup } from "@/components/motion/reveal";
 import { CtaBanner } from "@/components/home/cta-banner";
 import { testimonials } from "@/lib/data/testimonials";
@@ -16,21 +17,15 @@ export const metadata: Metadata = {
 export default function TestimonialsPage() {
   return (
     <div className="pb-16">
+      <PageBanner
+        eyebrow="Traveller stories"
+        title="Loved by thousands of travellers"
+        description="Every trip is different, but the feeling of coming home already planning the next one is something our travellers keep telling us about."
+        image="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&q=80&auto=format&fit=crop"
+        imageAlt="Happy travellers celebrating on a mountain trail"
+      />
       <Container className="pt-12 sm:pt-16">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-            Traveller stories
-          </p>
-          <h1 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-5xl">
-            Loved by thousands of travellers
-          </h1>
-          <p className="mt-4 text-muted-foreground">
-            Every trip is different, but the feeling of coming home already planning the next one
-            is something our travellers keep telling us about.
-          </p>
-        </Reveal>
-
-        <StaggerGroup className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal key={t.id} delay={Math.min(i * 0.05, 0.25)}>
               <div className="flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-sm shadow-black/5">

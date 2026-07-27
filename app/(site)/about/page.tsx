@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import {
   Award,
   Compass,
@@ -9,6 +8,7 @@ import {
   Users,
 } from "lucide-react";
 import { Container } from "@/components/layout/container";
+import { PageBanner } from "@/components/layout/page-banner";
 import { Reveal, StaggerGroup } from "@/components/motion/reveal";
 import { AnimatedCounter } from "@/components/motion/animated-counter";
 import { CtaBanner } from "@/components/home/cta-banner";
@@ -50,23 +50,12 @@ const values = [
 export default function AboutPage() {
   return (
     <div className="pb-16">
-      <div className="relative h-[42vh] min-h-72 w-full overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1920&q=80&auto=format&fit=crop"
-          alt="Amber Fort, a royal Rajasthan hill fort"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
-        <Container className="relative flex h-full flex-col justify-end pb-10">
-          <p className="text-sm font-semibold uppercase tracking-wide text-white/80">About us</p>
-          <h1 className="mt-2 max-w-2xl font-heading text-3xl font-semibold text-white sm:text-5xl">
-            We plan trips the way we&rsquo;d want them planned for us
-          </h1>
-        </Container>
-      </div>
+      <PageBanner
+        eyebrow="About us"
+        title="We plan trips the way we’d want them planned for us"
+        image="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1920&q=80&auto=format&fit=crop"
+        imageAlt="Amber Fort, a royal Rajasthan hill fort"
+      />
 
       <Container>
         <Reveal className="mx-auto mt-12 max-w-3xl text-center">

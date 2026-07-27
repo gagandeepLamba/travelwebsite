@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
+import { PageBanner } from "@/components/layout/page-banner";
 import { siteConfig } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
@@ -11,10 +12,16 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="py-12 sm:py-16">
-      <Container className="prose prose-neutral mx-auto max-w-3xl">
-        <h1 className="font-heading text-3xl font-semibold text-foreground">Terms & Conditions</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Last updated: {new Date().getFullYear()}</p>
+    <div className="pb-16">
+      <PageBanner
+        eyebrow="Legal"
+        title="Terms & Conditions"
+        description="Terms and conditions for booking tours and services with us."
+        image="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=80&auto=format&fit=crop"
+        imageAlt="Traveller reviewing a booking itinerary"
+      />
+      <Container className="prose prose-neutral mx-auto max-w-3xl pt-12 sm:pt-16">
+        <p className="text-sm text-muted-foreground">Last updated: {new Date().getFullYear()}</p>
 
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-muted-foreground">
           <section>

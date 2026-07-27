@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Building2, Clock, Globe, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/layout/container";
+import { PageBanner } from "@/components/layout/page-banner";
 import { TripPlannerQuiz } from "@/components/forms/trip-planner-quiz";
 import { Reveal } from "@/components/motion/reveal";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -15,26 +16,22 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="py-12 pb-16 sm:py-16">
+    <div className="pb-16">
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: siteConfig.url },
           { name: "Contact", url: `${siteConfig.url}/contact` },
         ])}
       />
-      <Container>
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary">Contact us</p>
-          <h1 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-5xl">
-            Let&rsquo;s plan your trip
-          </h1>
-          <p className="mt-4 text-muted-foreground">
-            Answer a few quick questions and a travel expert will reach out with a tailored
-            itinerary — or reach us directly using the details below.
-          </p>
-        </Reveal>
-
-        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-5">
+      <PageBanner
+        eyebrow="Contact us"
+        title="Let’s plan your trip"
+        description="Answer a few quick questions and a travel expert will reach out with a tailored itinerary — or reach us directly using the details below."
+        image="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80&auto=format&fit=crop"
+        imageAlt="Traveller checking a map by a scenic viewpoint"
+      />
+      <Container className="pt-12 sm:pt-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <Reveal>
               <TripPlannerQuiz />

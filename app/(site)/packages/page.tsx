@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
+import { PageBanner } from "@/components/layout/page-banner";
 import { CategoryFilter } from "@/components/packages/category-filter";
 import { PackageCard } from "@/components/packages/package-card";
 import { Reveal, StaggerGroup } from "@/components/motion/reveal";
@@ -37,28 +38,25 @@ export default async function PackagesPage({
   const packages = getPackagesByCategory(cat?.slug);
 
   return (
-    <div className="py-12 sm:py-16">
+    <div className="pb-16">
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: siteConfig.url },
           { name: "Packages", url: `${siteConfig.url}/packages` },
         ])}
       />
-      <Container>
-        <Reveal>
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-            {cat ? cat.label : "All Packages"}
-          </p>
-          <h1 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-            {cat ? cat.label : "Tour Packages"}
-          </h1>
-          <p className="mt-3 max-w-2xl text-muted-foreground">
-            {cat
-              ? cat.description
-              : "Every itinerary here is a starting point — share your dates and interests and we'll tailor it just for you."}
-          </p>
-        </Reveal>
-
+      <PageBanner
+        eyebrow={cat ? cat.label : "All Packages"}
+        title={cat ? cat.label : "Tour Packages"}
+        description={
+          cat
+            ? cat.description
+            : "Every itinerary here is a starting point — share your dates and interests and we'll tailor it just for you."
+        }
+        image="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80&auto=format&fit=crop"
+        imageAlt="Scenic travel destination with mountains and a lake"
+      />
+      <Container className="pt-12 sm:pt-16">
         <div className="mt-8">
           <CategoryFilter active={cat?.slug} />
         </div>

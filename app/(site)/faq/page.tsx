@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
+import { PageBanner } from "@/components/layout/page-banner";
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +24,7 @@ const categories = Array.from(new Set(faqs.map((f) => f.category)));
 
 export default function FaqPage() {
   return (
-    <div className="py-12 pb-16 sm:py-16">
+    <div className="pb-16">
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd
         data={breadcrumbSchema([
@@ -31,21 +32,15 @@ export default function FaqPage() {
           { name: "FAQ", url: `${siteConfig.url}/faq` },
         ])}
       />
-      <Container className="mx-auto max-w-3xl">
-        <Reveal className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-            Need to know
-          </p>
-          <h1 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-5xl">
-            Frequently asked questions
-          </h1>
-          <p className="mt-4 text-muted-foreground">
-            Can&apos;t find what you&apos;re looking for? Chat with us on the widget in the corner, or reach
-            out on WhatsApp.
-          </p>
-        </Reveal>
-
-        <div className="mt-10 space-y-10">
+      <PageBanner
+        eyebrow="Need to know"
+        title="Frequently asked questions"
+        description="Can't find what you're looking for? Chat with us on the widget in the corner, or reach out on WhatsApp."
+        image="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1920&q=80&auto=format&fit=crop"
+        imageAlt="Traveller planning a trip with a notebook and coffee"
+      />
+      <Container className="mx-auto max-w-3xl pt-12 sm:pt-16">
+        <div className="space-y-10">
           {categories.map((category) => (
             <Reveal key={category}>
               <h2 className="font-heading text-lg font-semibold text-foreground">{category}</h2>

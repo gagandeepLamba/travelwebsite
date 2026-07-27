@@ -50,3 +50,11 @@ export function YoutubeIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function TwitterIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base({ ...props, fill: "currentColor", stroke: "none" })}>
+      <path d="M18.9 2.5h3.1l-6.8 7.7 7.9 10.3h-6.2l-4.9-6.3-5.6 6.3H3.3l7.2-8.2L2.9 2.5h6.3l4.4 5.8zm-1.1 16.2h1.7L7.3 4.2H5.5z" />
+    </svg>
+  );
+}
