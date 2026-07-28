@@ -21,9 +21,12 @@ export function FeaturedPackages() {
       <Container>
         <Reveal className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-              Handpicked itineraries
-            </p>
+            <div className="flex items-center gap-2">
+              <span className="size-2 shrink-0 rounded-full bg-gold" />
+              <p className="font-script text-2xl leading-none text-primary sm:text-3xl">
+                Handpicked for you
+              </p>
+            </div>
             <h2 className="mt-2 font-heading text-3xl font-semibold text-foreground sm:text-4xl">
               Popular tour packages
             </h2>

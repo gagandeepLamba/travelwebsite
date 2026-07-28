@@ -15,7 +15,7 @@ export function PageBanner({
   imageAlt: string;
 }) {
   return (
-    <div className="relative h-[34vh] min-h-64 w-full overflow-hidden">
+    <div className="relative h-[34dvh] min-h-64 w-full overflow-hidden">
       <Image
         src={image}
         alt={imageAlt}

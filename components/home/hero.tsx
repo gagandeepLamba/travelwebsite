@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
-import { AnimatedCounter } from "@/components/motion/animated-counter";
+import { QuickSearch } from "@/components/home/quick-search";
 import { siteConfig } from "@/lib/constants/site";
 
 const slides = [
@@ -69,7 +69,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <Carousel setApi={setApi} opts={{ loop: true }} className="absolute inset-0">
-        <CarouselContent className="ml-0 h-[86vh] min-h-[34rem] sm:h-[92vh]">
+        <CarouselContent className="ml-0 h-[86dvh] min-h-[34rem] sm:h-[92dvh]">
           {slides.map((slide, i) => (
             <CarouselItem key={slide.image} className="relative h-full pl-0">
               <motion.div
@@ -93,7 +93,7 @@ export function Hero() {
         </CarouselContent>
       </Carousel>
 
-      <div className="relative flex h-[86vh] min-h-[34rem] flex-col justify-end sm:h-[92vh]">
+      <div className="relative flex h-[86dvh] min-h-[34rem] flex-col justify-end sm:h-[92dvh]">
         <Container className="pb-28 sm:pb-32">
           <motion.p
             key={`eyebrow-${current}`}
@@ -162,19 +162,11 @@ export function Hero() {
         </Container>
       </div>
 
-      <div className="relative border-t border-white/10 bg-black/30 backdrop-blur-md">
-        <Container className="grid grid-cols-2 gap-4 py-5 sm:grid-cols-4">
-          {siteConfig.stats.map((stat) => (
-            <div key={stat.label} className="text-center sm:text-left">
-              <AnimatedCounter
-                value={stat.value}
-                suffix={stat.suffix}
-                decimals={stat.value % 1 !== 0 ? 1 : 0}
-                className="font-heading text-2xl font-semibold text-white sm:text-3xl"
-              />
-              <p className="mt-0.5 text-xs text-white/70 sm:text-sm">{stat.label}</p>
-            </div>
-          ))}
+      <div className="relative z-10">
+        <Container>
+          <div className="pb-6 sm:-mt-14 sm:pb-0">
+            <QuickSearch />
+          </div>
         </Container>
       </div>
     </section>

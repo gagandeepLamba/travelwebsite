@@ -94,12 +94,6 @@ export const siteConfig = {
   ],
 } as const;
 
-export const quickServiceLinks = [
-  { label: "Hotel Booking", href: "/hotel-booking" },
-  { label: "Flight Booking", href: "/flight-booking" },
-  { label: "NGO Initiative", href: "/ngo" },
-] as const;
-
 export const navLinks = [
   { label: "Home", href: "/" },
   {
@@ -142,6 +136,11 @@ export const packageCategories = [
     slug: "honeymoon",
     label: "Honeymoon",
     description: "Romantic escapes handpicked for newlyweds, in India and abroad.",
+  },
+  {
+    slug: "spiritual-tours",
+    label: "Spiritual & Pilgrimage",
+    description: "Ayodhya, Varanasi, Prayagraj and other sacred circuits across India.",
   },
 ] as const;
 

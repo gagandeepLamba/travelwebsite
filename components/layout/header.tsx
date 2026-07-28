@@ -21,11 +21,13 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "@/components/icons/social-icons";
-import { packageCategories, quickServiceLinks, siteConfig } from "@/lib/constants/site";
+import { packageCategories, siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils";
 
 const primaryLinks = [
   { label: "Home", href: "/" },
+  { label: "Hotel Booking", href: "/hotel-booking" },
+  { label: "Flight Booking", href: "/flight-booking" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Testimonials", href: "/testimonials" },
@@ -102,7 +104,7 @@ export function Header() {
           scrolled && "shadow-md shadow-black/10"
         )}
       >
-        <Container className="flex h-16 items-center justify-between gap-4 sm:h-20">
+        <Container className="flex h-14 items-center justify-between gap-4 sm:h-16">
           <Link href="/" className="flex shrink-0 items-center gap-2 rounded-full bg-background px-2.5 py-1.5 shadow-sm sm:px-3">
             <span className="flex size-9 items-center justify-center rounded-full bg-primary font-heading text-base font-semibold text-primary-foreground sm:size-10">
               PT
@@ -161,27 +163,6 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-
-            <div className="group relative">
-              <button
-                className="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-primary-foreground/90 transition-colors hover:bg-white/10 hover:text-primary-foreground"
-                aria-haspopup="true"
-              >
-                Quick Links
-                <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
-              </button>
-              <div className="invisible absolute left-0 top-full z-50 w-56 translate-y-2 rounded-2xl border border-border bg-popover p-2 opacity-0 shadow-xl ring-1 ring-foreground/5 transition-all duration-150 group-hover:visible group-hover:translate-y-1 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-1 group-focus-within:opacity-100">
-                {quickServiceLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
@@ -260,27 +241,6 @@ export function Header() {
                     }
                   >
                     {cat.label}
-                  </SheetClose>
-                ))}
-              </motion.div>
-              <motion.div
-                initial={false}
-                className="mt-2 rounded-xl border border-border bg-muted/40 p-2"
-              >
-                <p className="px-2 pb-1 pt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                  Quick links
-                </p>
-                {quickServiceLinks.map((link) => (
-                  <SheetClose
-                    key={link.label}
-                    render={
-                      <Link
-                        href={link.href}
-                        className="block rounded-lg px-2 py-2.5 text-sm font-medium text-foreground hover:bg-background"
-                      />
-                    }
-                  >
-                    {link.label}
                   </SheetClose>
                 ))}
               </motion.div>

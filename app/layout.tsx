@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { Dancing_Script, Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { siteConfig } from "@/lib/constants/site";
 import "./globals.css";
 
@@ -10,6 +10,11 @@ const fontSans = Plus_Jakarta_Sans({
 
 const fontHeading = Fraunces({
   variable: "--font-heading",
+  subsets: ["latin"],
+});
+
+const fontScript = Dancing_Script({
+  variable: "--font-script",
   subsets: ["latin"],
 });
 
@@ -49,7 +54,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${fontSans.variable} ${fontHeading.variable}`}
+      className={`${fontSans.variable} ${fontHeading.variable} ${fontScript.variable}`}
     >
       <body className="antialiased">{children}</body>
     </html>
